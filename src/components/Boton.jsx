@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getUsers } from '../redux/actions';
+import { Link } from "react-router-dom"
+import { connect } from "react-redux"
+import { getUsers } from "../redux/actions"
 
 function Boton(props) {
-
     function traerUsarios() {
         props.getUsers()
     }
 
     return (
         <>
-            <Link to='/users'>
+            <Link to="/users">
                 <button onClick={traerUsarios}>Traer usuarios</button>
             </Link>
         </>
@@ -23,4 +22,4 @@ function Boton(props) {
 //     }
 // }
 
-export default connect(null, { getUsers })(Boton);
+export default connect(null, { getUsers })(Boton)
